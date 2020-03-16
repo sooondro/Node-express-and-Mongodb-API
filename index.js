@@ -3,6 +3,10 @@ const express = require('express');
 // Set up express app
 const app = express();
 
+//Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 //Initialize routes
 app.use('/api', require('./routes/api'));
 
